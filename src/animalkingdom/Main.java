@@ -56,8 +56,87 @@ public class Main {
         System.out.println();
         System.out.println(animalList.toString());
 
+        System.out.println("*** Sorting ***");
+        System.out.println();
+        
+        System.out.println("* Animals sorted Alphabetically by Name");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        animalList.forEach((a) -> System.out.println(a));
+        System.out.println();
 
-       
+        System.out.println("* Animals sorted decending order by Year Named*");
+        animalList.sort((a1, a2) -> a2.getYear() - a1.getYear());
+        animalList.forEach((a) -> System.out.println(a));
+        System.out.println();
+
+        System.out.println("* Animals sorted by how they move *");
+        animalList.sort((a1, a2) -> a1.getMove().compareToIgnoreCase(a2.getMove()));
+        animalList.forEach((a) -> System.out.println(a));
+        System.out.println();
+
+        System.out.println("* Animals breath with lungs *");
+        showAnimals(animalList, a -> (a.getBreath().equals("Lungs")));
+        System.out.println();
+
+        System.out.println("* Animals breath with lungs and named in 1758 *");
+        showAnimals(animalList, ((a -> a.getBreath().equals("Lungs") && a.getYear() == 1758)));
+        System.out.println();
+
+        System.out.println("* Animals breath with lungs and lay eggs");
+        showAnimals(animalList, ((a -> a.getBreath().equals("Lungs") && a.getReproduce() == "Eggs")));
+        System.out.println();
+
+        System.out.println("* Animals sorted alphabetically and named in 1758 *");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        showAnimals(animalList, (a -> a.getYear() == 1758));
+        System.out.println();
+
+        System.out.println("** Alphabetically sorted Mammals **");
+        System.out.println();
+        System.out.println();
+        System.out.println("* Mammals Sorted using getSpecies *");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        showAnimals(animalList, (a -> a.getSpecies().equals("Mammals")));
+        System.out.println();
+        System.out.println("* Mammals Sorted using getId *");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        showAnimals(animalList, (a -> a.getId() <= 6 ));
+        System.out.println();
+        System.out.println("* Mammals Sorted using instanceof *");
+        showAnimals(animalList, (a -> a instanceof Mammal));
+        System.out.println();
+
+        System.out.println("** Alphabetically sorted Birds **");
+        System.out.println();
+        System.out.println();
+        System.out.println("* Birds Sorted using getSpecies *");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        showAnimals(animalList, (a -> a.getSpecies().equals("Birds")));
+        System.out.println();
+        System.out.println("* Birds Sorted using getId *");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        showAnimals(animalList, ((a -> (a.getId() > 6) && (a.getId() < 12))));
+        System.out.println();
+        System.out.println("* Birds Sorted using instanceof *");
+        showAnimals(animalList, (a -> a instanceof Birds));
+        System.out.println();
+
+
+        System.out.println("** Alphabetically sorted Fish **");
+        System.out.println();
+        System.out.println();
+        System.out.println("* Fish Sorted using getSpecies *");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        showAnimals(animalList, (a -> a.getSpecies().equals("Fish")));
+        System.out.println();
+        System.out.println("* Fish Sorted using getId *");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        showAnimals(animalList, (a -> a.getId() >= 12 ));
+        System.out.println();
+        System.out.println("* Fish Sorted using instanceof *");
+        showAnimals(animalList, (a -> a instanceof Fish));
+        System.out.println();
+        
 
 
         
