@@ -3,11 +3,13 @@ package animalkingdom;
 import java.util.*;
 
 public class Main {
-
-
-
-
-
+    public static void showAnimals(ArrayList<AbstractAnimals> animals, CheckAnimal tester){
+        for (AbstractAnimals a : animals){
+            if(tester.test(a)){
+                System.out.println("Species: " + a.getSpecies()  + ", Name: " + a.getName() + ", Breath: " + a.getBreath() + ", Year Named: " + a.getYear() + ", Moves: " + a.getMove() + ", Reproduce: " + a.getReproduce());
+            }
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -32,10 +34,27 @@ public class Main {
         Fish catfish = new Fish(12, "Catfish", 1812);
         Fish perch = new Fish(12, "Perch", 1758);
 
-        ArrayList<AbstractAnimal> animalList = new ArrayList<AbstractAnimal>();
+        ArrayList<AbstractAnimals> animalList = new ArrayList<AbstractAnimals>();
         animalList.add(panda);
+        animalList.add(zebra);
+        animalList.add(koala);
+        animalList.add(sloth);
+        animalList.add(armadillo);
+        animalList.add(racoon);
+        animalList.add(bigfoot);
+        animalList.add(pigeon);
+        animalList.add(peacock);
+        animalList.add(parrot);
+        animalList.add(swan);
+        animalList.add(salmon);
+        animalList.add(catfish);
+        animalList.add(perch);
+        animalList.add(toucan);
+        
 
-
+        // All animals
+        System.out.println();
+        System.out.println(animalList.toString());
 
 
        

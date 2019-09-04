@@ -1,8 +1,8 @@
 package animalkingdom;
 
-public class Fish extends AbstractAnimal{
+public class Fish extends AbstractAnimals{
 
-    public Fish (int id, String name, double year){
+    public Fish (int id, String name, int year){
         super(id, name, year);
     }
 
@@ -20,6 +20,12 @@ public class Fish extends AbstractAnimal{
     @Override
     public String getReproduce(){
         return "Eggs";
+    }
+
+    @Override
+    public String getSpecies()
+    {
+        return "Fish";
     }
 
     @Override

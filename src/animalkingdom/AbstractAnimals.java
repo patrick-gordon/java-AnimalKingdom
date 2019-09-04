@@ -1,11 +1,11 @@
 package animalkingdom;
 
-public abstract class AbstractAnimal {
+public abstract class AbstractAnimals {
     int id;
-    int name;
+    String name;
     int year;
 
-    public AbstractAnimal(int id, String name, double year){
+    public AbstractAnimals(int id, String name, int year){
         this.id = id;
         this.name = name;
         this.year = year;
@@ -15,17 +15,18 @@ public abstract class AbstractAnimal {
     public abstract String getMove();
     public abstract String getBreath();
     public abstract String getReproduce();
+    public abstract String getSpecies();
     
     //meathods 
-    public getId(){
+    public int getId(){
         return id;
     }
 
-    public getName(){
+    public String getName(){
         return name;
     }
 
-    public getYear(){
+    public  int getYear(){
         return year;
     }
 
