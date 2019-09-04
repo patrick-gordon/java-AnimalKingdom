@@ -1,33 +1,31 @@
 package animalkingdom;
 
-public class Mammal extends AbstractAnimals {
+public class Fish extends AbstractAnimal{
 
-    public Mammal (int id, String name, double year){
+    public Fish (int id, String name, double year){
         super(id, name, year);
     }
 
-    //meathods
-
     @Override
     public String getMove(){
-        return "Walk";
+        return "Swim";
     }
 
     @Override
     public String getBreath(){
-        return "Lungs";
+        return "Gills";
     }
 
 
     @Override
     public String getReproduce(){
-        return "Live Births";
+        return "Eggs";
     }
 
     @Override
     public String toString()
     {
-        return "Mammal{" + 
+        return "Fish{" + 
         "Id: '" + id + '\'' +
         ", Name: " + name + 
         ", Year: " + year + 

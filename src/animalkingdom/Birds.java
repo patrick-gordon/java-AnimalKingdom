@@ -1,16 +1,15 @@
 package animalkingdom;
 
-public class Mammal extends AbstractAnimals {
+public class Birds extends AbstractAnimals{
 
-    public Mammal (int id, String name, double year){
+    public Birds (int id, String name, double year){
         super(id, name, year);
     }
 
-    //meathods
-
+    
     @Override
     public String getMove(){
-        return "Walk";
+        return "Fly";
     }
 
     @Override
@@ -21,13 +20,13 @@ public class Mammal extends AbstractAnimals {
 
     @Override
     public String getReproduce(){
-        return "Live Births";
+        return "Eggs";
     }
 
     @Override
     public String toString()
     {
-        return "Mammal{" + 
+        return "Birds{" + 
         "Id: '" + id + '\'' +
         ", Name: " + name + 
         ", Year: " + year + 
